@@ -1,5 +1,6 @@
-.pyc
-.project
-.pydevproject
+*.pyc
+*.project
+*.pydevproject
 .idea/
+oscar/
 heatingmasterstore/settings_local.py
