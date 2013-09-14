@@ -198,8 +198,68 @@ OSCAR_DASHBOARD_NAVIGATION.append(
     })
 
 
+
+
+# Oscar settings
+
+OSCAR_RECENTLY_VIEWED_PRODUCTS = 20
+OSCAR_ALLOW_ANON_CHECKOUT = True
+
+OSCAR_SHOP_NAME = 'Heating Master Store'
+OSCAR_SHOP_TAGLINE = ''
+
+COMPRESS_ENABLED = True
+COMPRESS_PRECOMPILERS = (
+    ('text/less', 'lessc {infile} {outfile}'),
+)
+
+THUMBNAIL_KEY_PREFIX = 'HeatingMaster'
+
+LOG_ROOT = location('logs')
+# Ensure log root exists
+if not os.path.exists(LOG_ROOT):
+    os.mkdir(LOG_ROOT)
+
+DISPLAY_VERSION = False
+
+USE_TZ = True
+
+# Must be within MEDIA_ROOT for sorl to work
+OSCAR_MISSING_IMAGE_URL = 'image_not_found.jpg'
+
+# Add stores node to navigation
+new_nav = OSCAR_DASHBOARD_NAVIGATION
+new_nav.append(
+    {
+        'label': 'Stores',
+        'icon': 'icon-shopping-cart',
+        'children': [
+            {
+                'label': 'Stores',
+                'url_name': 'stores-dashboard:store-list',
+            },
+            {
+                'label': 'Store groups',
+                'url_name': 'stores-dashboard:store-group-list',
+            },
+        ]
+    })
+new_nav.append(
+    {
+        'label': 'Datacash',
+        'icon': 'icon-globe',
+        'children': [
+            {
+                'label': 'Transactions',
+                'url_name': 'datacash-transaction-list',
+            },
+        ]
+    })
+OSCAR_DASHBOARD_NAVIGATION = new_nav
+
+GEOIP_PATH = os.path.join(os.path.dirname(__file__), 'geoip')
+
 try:
     from settings_local import *
 except ImportError:
     pass
-

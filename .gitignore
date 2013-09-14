@@ -4,3 +4,5 @@
 .idea/
 oscar/
 heatingmasterstore/settings_local.py
+*~
+heatingmasterstore/public/static/CACHE/
