@@ -5,15 +5,22 @@ from oscar.defaults import *
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+SQL_DEBUG = True
+SEND_BROKEN_LINK_EMAILS = False
 
 ADMINS = (
-     ('Sean Liu', 'sean@heatingmaster.co.uk'),
+     ('admin', 'admin@heatingmaster.co.uk'),
 )
 
 MANAGERS = ADMINS
 
-EMAIL_SUBJECT_PREFIX = '[HeatingMaster] '
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_SUBJECT_PREFIX = '[HeatingMasterStore] '
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'localhost'
+#EMAIL_PORT = 1025
+
+OSCAR_SEND_REGISTRATION_EMAIL = True
+OSCAR_FROM_EMAIL = 'admin@heatingmaster.co.uk'
 
 DATABASES = {
     'default': {
