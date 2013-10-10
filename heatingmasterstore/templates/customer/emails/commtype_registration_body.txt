@@ -1,0 +1,5 @@
+{% load i18n %}{% trans 'Welcome to Heating Master Store‏.' %}
+If you have any further queries, please contact us at sales@heatingmaster.co.uk
+We hope you enjoy your shopping experience.
+Heating Master Store - UK's leading underfloor heating products supplier.
+www.heatingmaster.co.uk.
