@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+{% load promotion_tags %}
+{% load i18n %}
+
+{% block body_class %}home-page{% endblock body_class %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+    
+    <div class="row">
+        <div class="span8" >
+            <div class="span7" id="about_us">
+                <h2>About us</h2>
+                <p>Heating Master Store&trade; is the trading name of Heating Master Limited,  one of the UK's leading supplier of underfloor heating products. We are a professional but friendly team based in Nottingham, serving the whole UK by supplying premium quality products at trade prices.</p>
+                <p>Our products ranges covers all you need in installing underfloor heating system, such as insulation boards, electrical heating mat, thermostat, pipes, accessories, etc.</p>
+                <p>We work hard to ensure the excellent quality and performance of products. All our products has the CE certificate to meet EU and UK standards and legislation. </p>
+                <p>Registered in England and Wales, company number: 08554455, VAT number:167 8850 57</p>
+            </div>
+            <div class="span7" id="about_delivery">
+                <h2>Excellent Nextday Delivery Service</h2>
+                <p>Same day dispatch if orders are placed before 1:00pm.</p>
+                <p>DPD next day service will deliver the goods to you on the next working day.</p>
+                <p>DPD's award-winning <a href='http://www.dpd.co.uk/lp/predict/main/index.html' target='_blank'>Preditct&trade; </a>service provides you with a one hour delivery window so you don't have to wait in all day for your parcels.
+                    <br>View our short Predict film <a href='http://www.dpd.co.uk/lp/predict/main/index.html' target='_blank'>here</a> </p>
+            </div>
+            <div class="span7" id="about_packaging">
+                <h2>Reliable Items Packaging</h2>
+                <p>Your items are packaged by our professional warehouse staffs very carefully, by wrapping corrugated cardboard to protect fragile products from damages during transportation. <p/>
+                <div>Example:Styrofoam board's wrapped in strong corrugated cardboard,ready to ship. 1.2m x 0.6m 
+                <img src="http://www.heatingmaster.co.uk/static/wrapping.jpg" alt="wrapping"></div>
+                <br/><br/>
+            </div>
+            <div class="span7" id="about_returns">
+                <h2>14 Days Return Policy</h2>
+                <p>100% SATISFACTION GUARANTEED!! If you are not completely satisfied with our product, We are happy to exchange or refund it within 14 days of receipt.</p>
+
+            </div>
+        </div>
+
+        <div class="span4">
+            <div class="promotion-block widget-delivery">
+                <h3><i class="icon-earth"></i>{% trans "World wide delivery" %}</h3>
+                <p>{% trans "We ship worldwide from our warehouses in Melbourne, Australia and other locations depending on brand and destination." %}</p>
+<!--                 <a href="#" class="btn">{% trans "Find out more" %}</a> -->
+            </div>
+
+            <div class="promotion-block widget-shipping">
+                <h3 class="free-delivery"><i class="icon-truck"></i> <span><strong>{% trans "Free shipping" %}</strong> <br/> {% trans "For all orders" %}</span></h3>
+                <p>{% trans "We offer Free Shipping for all orders." %}</p>
+<!--                 <a href="#" class="btn">{% trans "Find out more" %}</a> -->
+            </div>
+        </div>
+    </div>
+{% endblock %}
+                    

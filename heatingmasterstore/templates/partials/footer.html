@@ -6,22 +6,23 @@
             <li>
                 <h3>{% trans "About" %}</h3>
                 <ul>
-                    <li><a href="#">{% trans "All" %}</a></li>
-                    <li><a href="#">{% trans "Gill" %}</a></li>
-                    <li><a href="#">{% trans "Henro Lloyd" %}</a></li>
-                    <li><a href="#">{% trans "Zhik" %}</a></li>
-                    <li><a href="#">{% trans "Magic" %}</a></li>
+                    <li><a href="/about/#about_us">{% trans "About Us" %}</a></li>
+                    <li><a href="/about/#about_delivery">{% trans "Nextday Delivery Service" %}</a></li>
+                    <li><a href="/about/#about_packaging">{% trans "Items Packaging" %}</a></li>
+                    <li><a href="/about/#about_returns">{% trans "14 Days Return Policy" %}</a></li>
+                   <!--  <li><a href="#">{% trans "Terms and Conditions" %}</a></li> -->
+
                 </ul>
             </li>
             <li>
-                <h3>{% trans "Contact us" %}</h3>
+                <h3>{% trans "Contact us 24/7" %}</h3>
                 <p>
                     {% trans "sales@heatingmaster.co.uk" %} <br/>
 {#                    <strong><i class="icon-mobile"></i>{% trans "0800-424-1324" %}</strong>#}
                 </p>
                 <p class="social-icons">
-                    <a href="#"><i class="icon-facebook"></i></a>
-                    <a href="#"><i class="icon-twitter"></i></a>
+  <!--                   <a href="#"><i class="icon-facebook"></i></a>
+                    <a href="#"><i class="icon-twitter"></i></a> -->
                 </p>
             </li>
         </ul>
@@ -30,10 +31,13 @@
     <div class="footer-disclaimer">
         <div class="container-fluid">
             <a href="http://tangentlabs.github.io/django-oscar/" class="pull-right">{% trans "Site by Django-Oscar" %}</a>
+
+            <p>Heating Master Limited is registered in England and Wales, Company No. 08554455, VAT No. 167 8850 57</p>
             <p>
                 <a href="https://www.verisign.co.uk/" title="https://www.verisign.co.uk/" target="_blank"><i class="verisign"></i></a>
                 <i class="credit-cards"></i>
             </p>
+            <p>Copyright 2013 Heating Master Limited, t/a Heating Master Store</p>
         </div>
     </div>
 </footer>
