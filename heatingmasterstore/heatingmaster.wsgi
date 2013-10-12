@@ -6,11 +6,11 @@ import urllib
 sys.stdout = sys.stderr
 
 # Project root
-root = '/home/shu/www/heatingmasterstore/heatingmasterstore'
+root = '/var/www/heatingmaster.co.uk/heatingmasterstore'
 sys.path.insert(0, root)
 
 # Packages from virtualenv
-activate_this = '/home/shu/www/heatingmasterstore/oscar/bin/activate_this.py'
+activate_this = '/var/www/heatingmaster.co.uk/oscar/bin/activate_this.py'
 execfile(activate_this, dict(__file__=activate_this))
 
 # Set environmental variable for Django and fire WSGI handler

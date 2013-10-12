@@ -3,20 +3,29 @@ Listen 9000
     ServerName www.heatingmaster.co.uk
     CustomLog /var/log/apache2/access.log combined
     ErrorLog /var/log/apache2/error.log
-    AllowEncodedSlashes On
+        AllowEncodedSlashes On
 
     WSGIDaemonProcess heatingmaster processes=2 threads=5 display-name=heatingmaster maximum-requests=10000
     WSGIProcessGroup heatingmaster
     WSGIApplicationGroup %{GLOBAL}
-    WSGIScriptAlias / /home/shu/www/heatingmasterstore/heatingmasterstore/heatingmaster.wsgi
+    WSGIScriptAlias / /var/www/heatingmaster.co.uk/heatingmasterstore/heatingmaster.wsgi
     WSGIPassAuthorization On
 
-    Alias /media/  /home/shu/www/heatingmasterstore/heatingmasterstore/public/media/
-    Alias /static/ /home/shu/www/heatingmasterstore/heatingmasterstore/public/static/
-    
-    <Directory /home/shu/www/heatingmasterstore/heatingmasterstore>
+    Alias /favicon.ico /var/www/heatingmaster.co.uk/heatingmasterstore/public/static/favicon.ico
+    Alias /media/  /var/www/heatingmaster.co.uk/heatingmasterstore/public/media/
+    Alias /static/ /var/www/heatingmaster.co.uk/heatingmasterstore/public/static/
+   <Directory /var/www/heatingmaster.co.uk/heatingmasterstore/public/static/>
+    Order deny,allow
+    Allow from all
+    </Directory>
+
+    <Directory /var/www/heatingmaster.co.uk/heatingmasterstore/public/media/>
+    Order deny,allow
+    Allow from all
+    </Directory>
+
+    <Directory /var/www/heatingmaster.co.uk/>
         Order deny,allow
         Allow from all
     </Directory>
-
-</Virtualhost>
+</VirtualHost>
