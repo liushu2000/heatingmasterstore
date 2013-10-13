@@ -2,8 +2,14 @@
 *.project
 *.pydevproject
 .idea/
+.httppassword
+*~
 /oscar
 /heatingmasterstore/settings_local.py
-*~
 /heatingmasterstore/public/static/oscar/less/
 /heatingmasterstore/public/static/CACHE/
+/heatingmasterstore/public/static/*.*
+/heatingmasterstore/public/static/images/
+/heatingmasterstore/public/media/cache/
+/heatingmasterstore/public/media/images/
+
