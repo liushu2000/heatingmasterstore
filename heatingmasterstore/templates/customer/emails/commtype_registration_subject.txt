@@ -1,1 +1,1 @@
-{% load i18n %}{% trans 'Welcome to Heating Master Store UK [www.HeatingMaster.co.uk].' %}
+{% load i18n %}{% trans 'Welcome to Heating Master Store UK [www.HeatingMaster.co.uk]' %}

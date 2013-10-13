@@ -1,6 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.conf import settings
 from django.contrib import admin
+from django.conf.urls.static import static
 from oscar.app import application, shop
 from paypal.express.dashboard.app import application
 
@@ -14,7 +15,6 @@ urlpatterns = patterns('',
     (r'^dashboard/paypal/express/', include(application.urls)),
     (r'', include(shop.urls)),
 )
-
-urlpatterns += patterns('',
-    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT, 'show_indexes': False}),
-)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

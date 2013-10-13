@@ -1,0 +1,7 @@
+1.Make sure pil on your system supports JPEG
+if not, under 64 bit ubuntu:
+# ln -s /usr/lib/x86_64-linux-gnu/libjpeg.so /usr/lib
+# ln -s /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/lib
+# ln -s /usr/lib/x86_64-linux-gnu/libz.so /usr/lib
+Uninstall and install pil again.
+2.Database encodeing should be set to UTF8_GENERAL_CI
