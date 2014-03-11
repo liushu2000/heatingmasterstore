@@ -6,7 +6,7 @@
 
     function svgModernizr() {
         if (!Modernizr.svg) {
-            $(".logo").attr("src", "/static/demo/img/svg/logo.png");
+            $(".logo").attr("src", "/static/images/logo_store_email.gif");
         }
     }
 
