@@ -260,6 +260,8 @@ GEOIP_PATH = os.path.join(os.path.dirname(__file__), 'geoip')
 
 COMPRESS_PARSER = 'compressor.parser.HtmlParser'
 
+OSCAR_ALLOW_ANON_REVIEWS = False
+
 try:
     from settings_local import *
 except ImportError:
